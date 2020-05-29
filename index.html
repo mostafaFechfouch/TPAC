@@ -26,6 +26,138 @@
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.min.css" rel="stylesheet">
 
+<!--****************************************************************************************-->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
+  <style type="text/css">
+     h2{
+    text-align:center;
+    padding: 20px;
+  }
+  /* Slider */
+  
+  .slick-slide {
+      margin: 0px 20px;
+  }
+  
+  .slick-slide img {
+      width: 100%;
+  }
+  
+  .slick-slider
+  {
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+              user-select: none;
+      -webkit-touch-callout: none;
+      -khtml-user-select: none;
+      -ms-touch-action: pan-y;
+          touch-action: pan-y;
+      -webkit-tap-highlight-color: transparent;
+  }
+  
+  .slick-list
+  {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+  }
+  .slick-list:focus
+  {
+      outline: none;
+  }
+  .slick-list.dragging
+  {
+      cursor: pointer;
+      cursor: hand;
+  }
+  
+  .slick-slider .slick-track,
+  .slick-slider .slick-list
+  {
+      -webkit-transform: translate3d(0, 0, 0);
+         -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+           -o-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+  }
+  
+  .slick-track
+  {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block;
+  }
+  .slick-track:before,
+  .slick-track:after
+  {
+      display: table;
+      content: '';
+  }
+  .slick-track:after
+  {
+      clear: both;
+  }
+  .slick-loading .slick-track
+  {
+      visibility: hidden;
+  }
+  
+  .slick-slide
+  {
+      display: none;
+      float: left;
+      height: 100%;
+      min-height: 1px;
+  }
+  [dir='rtl'] .slick-slide
+  {
+      float: right;
+  }
+  .slick-slide img
+  {
+      display: block;
+  }
+  .slick-slide.slick-loading img
+  {
+      display: none;
+  }
+  .slick-slide.dragging img
+  {
+      pointer-events: none;
+  }
+  .slick-initialized .slick-slide
+  {
+      display: block;
+  }
+  .slick-loading .slick-slide
+  {
+      visibility: hidden;
+  }
+  .slick-vertical .slick-slide
+  {
+      display: block;
+      height: auto;
+      border: 1px solid transparent;
+  }
+  .slick-arrow.slick-hidden {
+      display: none;
+  }
+  .page-section {
+    padding: 3rem 0;
+}
+  </style>
+ <!--****************************************************************************************-->
+
 </head>
 
 <body id="page-top">
@@ -48,10 +180,13 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            <a class="nav-link js-scroll-trigger" href="#portfolio">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Nos Services</a>
+            <a class="nav-link js-scroll-trigger" href="#services">Nos Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#partners">Partners</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -83,41 +218,9 @@
     </div>
   </header>
 
-  <!-- Pourquoi TPAC -->
-  <section class="page-section" id="services">
-    <div class="container">
-      <h2 class="text-center mt-0">POURQUOI TPAC</h2>
-      <hr class="divider my-4">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-award text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Qualité</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-user-check text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Fiabilité</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-clock text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Disponibilité</h3>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-file-signature text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Garantie</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
   <!-- Nos Services -->
-  <section id="portfolio">
+  <section class="page-section" id="portfolio">
     <div class="container-fluid p-0">
       <h2 class="text-center mt-0">Nos Services</h2>
       <hr class="divider my-4">
@@ -203,6 +306,58 @@
       </div>
     </div>
   </section>
+
+  <!-- Pourquoi TPAC -->
+  <section class="page-section" id="services">
+    <div class="container">
+      <h2 class="text-center mt-0">POURQUOI TPAC</h2>
+      <hr class="divider my-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-award text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Qualité</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-user-check text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Fiabilité</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-clock text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Disponibilité</h3>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-file-signature text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Garantie</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--********************************************************-->
+  <section class="page-section" id="partners"></section>
+    <div class="container">
+      <h2 class="text-center mt-0">Our  Partners</h2>
+      <hr class="divider my-4">
+      <section class="customer-logos slider">
+         <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+         <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+         <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+         <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+         <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+         <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+         <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+         <div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+      </section>
+    </div>
+    </section>
+
   <!-- Nous Contacter -->
   <section class="page-section" id="contact">
     <div class="container">
@@ -255,15 +410,40 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--    <script src="vendor/jquery/jquery.min.js"></script>
 
+-->
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+     $('.customer-logos').slick({
+         slidesToShow: 6,
+         slidesToScroll: 1,
+         autoplay: true,
+         autoplaySpeed: 1500,
+         arrows: false,
+         dots: false,
+         pauseOnHover: false,
+         responsive: [{
+             breakpoint: 768,
+             settings: {
+                 slidesToShow: 4
+             }
+         }, {
+             breakpoint: 520,
+             settings: {
+                 slidesToShow: 3
+             }
+         }]
+     });
+ });
+ </script>
 
 </body>
 
